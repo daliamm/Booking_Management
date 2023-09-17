@@ -17,13 +17,14 @@
         <div class="banner-form-area">
             <div class="container">
                 <div class="banner-form">
-                    <form>
+                    <form method="get" action="route('booking.search')">
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-3">
                                 <div class="form-group">
                                     <label>CHECK IN TIME</label>
                                     <div class="input-group">
-                                        <input id="datetimepicker" type="text" class="form-control" placeholder="11/02/2020">
+                                        <input autocomplete="off" type="text" name="check_in" required class="form-control dt_picker" 
+                                        placeholder="yyy-mm-dd">
                                         <span class="input-group-addon"></span>
                                     </div>
                                     <i class='bx bxs-chevron-down'></i>	
@@ -34,7 +35,9 @@
                                 <div class="form-group">
                                     <label>CHECK OUT TIME</label>
                                     <div class="input-group">
-                                        <input id="datetimepicker-check" type="text" class="form-control" placeholder="11/02/2020">
+                                    <input autocomplete="off" type="text" name="check_out" required class="form-control dt_picker" 
+                                        placeholder="yyy-mm-dd">                                        
+                                        
                                         <span class="input-group-addon"></span>
                                     </div>
                                     <i class='bx bxs-chevron-down'></i>	
@@ -45,17 +48,17 @@
                                 <div class="form-group">
                                     <label>GUESTS</label>
                                     <select class="form-control">
-                                        <option>01</option>
-                                        <option>02</option>
-                                        <option>03</option>
-                                        <option>04</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>4</option>
+                                        <option>10-20</option>
                                     </select>	
                                 </div>
                             </div>
 
                             <div class="col-lg-4 col-md-4">
                                 <button type="submit" class="default-btn btn-bg-one border-radius-5">
-                                    Check Arability
+                                    Check Availability
                                 </button>
                             </div>
                         </div>

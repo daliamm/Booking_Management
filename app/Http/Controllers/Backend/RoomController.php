@@ -7,6 +7,7 @@ use App\Models\Facility;
 use App\Models\MultiImage;
 use App\Models\Room;
 use App\Models\RoomNumber;
+use App\Models\RoomType;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use MultipleIterator;
@@ -30,6 +31,7 @@ class RoomController extends Controller
     $room->size=$request->size;
      $room->short_desc=$request->short_desc;
     $room->description=$request->description;
+    $room->status=1;
     if($request->file('image')){
         $image=$request->file('image');
         $name_gen=hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
@@ -153,12 +155,53 @@ public function DeleteRoomNumber($id){
         'alert-type'=>'success'
      );
      return redirect()->back()->with($notification);
-    
-    
-    
-    
-    
+ 
     }
+
+public function DeleteRoom(Request $request,$id){
+
+$room=Room::finnd($id);
+ if(file_exists('upload/rooming/'.$room->image) AND !empty($room->image)){
+@unlink('upload/rooming/'.$room->image);
+
+ }
+
+$subimage=MultiImage::where('rooms_id',$room->id)->get()->toArray();
+if(!empty($subimage)){
+    foreach($subimage as $value){
+        if(!empty($value)){
+            @unlink('upload/rooming/multi_img/'.$value['multi_img']);
+        }
+    }
+}
+RoomType::where('id',$room->roomtype_id)->delete();
+MultiImage::where('rooms_id',$room->id)->delete();
+Facility::where('rooms_id',$room->id)->delete();
+RoomNumber::where('rooms_id',$room->id)->delete();
+$room->delete();
+$notification=array(
+    'message'=>'Room Deleted Successfully',
+    'alert-type'=>'success'
+ );
+ return redirect()->back()->with($notification);
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

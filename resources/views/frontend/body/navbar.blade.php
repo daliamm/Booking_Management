@@ -19,28 +19,10 @@
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="{{url('/')}}" class="nav-link active">
                                         Home 
-                                        <i class='bx bx-chevron-down'></i>
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="index.html" class="nav-link active">
-                                                Home One  
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="index-2.html" class="nav-link">
-                                                Home Two
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="index-3.html" class="nav-link">
-                                                Home Three
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                   
                                 <li class="nav-item">
                                     <a href="about.html" class="nav-link">
                                         About
@@ -142,65 +124,24 @@
                                         Services 
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="services-1.html" class="nav-link">
-                                                Services Style One 
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="services-2.html" class="nav-link">
-                                                Services Style Two 
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="service-details.html" class="nav-link">
-                                                Service Details 
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
+            @php
+            $room=App\Models\Room::latest()->get();
+            @endphp                               
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Blog
+                                    <a href="route('froom.all')" class="nav-link">
+                                         All Rooms
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="blog-1.html" class="nav-link">
-                                                Blog Style One 
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-2.html" class="nav-link">
-                                                Blog Style Two 
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-details.html" class="nav-link">
-                                                Blog Details 
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Rooms
-                                        <i class='bx bx-chevron-down'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
+                                        @foreach($room as $item)
+                                        
                                         <li class="nav-item">
                                             <a href="room.html" class="nav-link">
-                                                Rooms 
+                                                {{$item['type']['name'] }} 
                                             </a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a href="room-details.html" class="nav-link">
-                                                Room Details 
-                                            </a>
-                                        </li>
+                                      @endforeach
                                     </ul>
                                 </li>
 

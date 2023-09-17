@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-             @include('frontend.dashboard.user_dashboard')
+                @include('frontend.dashboard.user_menu')
             </div>
             <div class="col-lg-9">
                 <div class="service-article">
