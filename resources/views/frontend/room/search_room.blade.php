@@ -23,7 +23,7 @@
             @endphp
 
 
-            @if($av_room>0 && old('persion')<= $item->guests_no)
+            @if($av_room>0 && old('persion')<= $item->total)
                 <div class="col-lg-4 col-md-6">
                     <div class="room-card">
                         <a href="{{route('search_room_details',$item->id.'?check_in='.old('check_in').'

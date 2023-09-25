@@ -58,14 +58,14 @@
                                          />
                                 </div>
                             </div>
-                           
+                           <div class=""></div>
                             <div class="row mb-3">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Photo</h6>
                                 </div>
                                 <div class=" form-group col-sm-9 text-secondary">
                                     <div class="mb-3">
-                                        <input class="form-control" type="file" name="photo" id="image">
+                                        <input class="form-control" type="file" name="image" id="image">
                                     </div>
                                 </div>
 
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="  col-sm-9 text-secondary">
                                     <div class="mb-3">
-									<img  id="showImage" src="{{ url('upload//admin_images/no_image.jpg')}}"
+									<img  id="showImage" src="{{ url('upload/no_image.jpg')}}"
                                     alt="Admin" class="rounded-circle p-1 bg-primary" width="80">                                    </div>
                                 </div>
                            

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('room_booking_dates', function (Blueprint $table) {
+        Schema::create('room_booked_dates', function (Blueprint $table) {
             $table->id();
             $table->integer('booking_id')->nullable();
             $table->integer('room_id')->nullable();
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('room_booking_dates');
+        Schema::dropIfExists('room_booked_dates');
     }
 };

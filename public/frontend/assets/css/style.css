@@ -1201,7 +1201,7 @@ Sidebar Modal
 Main Banner Area
 ====================================*/
 .banner-area {
-  background-image: url(../img/home-one.jpg);
+  background-image: url(../img/1.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1231,10 +1231,10 @@ Main Banner Area
 
 .banner-content h1 {
   font-size: 60px;
-  line-height: 1.2;
+  line-height: 1.8;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: #292323;
+  margin-bottom:10px;
+  color: #f7f7f7;
 }
 
 .banner-content p {
@@ -1244,7 +1244,7 @@ Main Banner Area
 }
 
 .banner-area-three {
-  background-image: url(../img/home-three.jpg);
+  /* background-image: url(../img/home-three.jpg); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

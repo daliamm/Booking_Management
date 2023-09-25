@@ -37,7 +37,7 @@
 								@foreach($team as $key=>$item)
 									<tr>
 										<td>{{$key+1}}</td>
-										<td><img src="{{(!empty($item->room->image)) ? url('upload/roomimg/'.$item->room->image):url('upload/no_image.jpg')}}" alt="" style="width:50px; height:30px;"></td>
+										<td><img src="{{(!empty($item->image)) ? url('upload//roomimg/'.$item->image):url('upload/no_image.jpg')}}" alt="" style="width:50px; height:30px;"></td>
 										<td>{{$item->name}}</td>
 										<td>{{$item->postion}}</td>
 										<td>{{$item->facebook}}</td>
@@ -58,8 +58,7 @@
 						</div>
 					</div>
 				</div>
-				<h6 class="mb-0 text-uppercase">DataTable Import</h6>
-				<hr/>
+				
 				
 			</div>
 @endsection

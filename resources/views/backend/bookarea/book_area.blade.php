@@ -51,7 +51,7 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Short Description</h6>
                                     </div>
-                                    <<textarea class="form-control" id="input23" placeholder="Description"
+                                    <textarea class="form-control" id="input23" placeholder="Description"
                                         name="short_desc" rows="3" >{{$book->short_desc}}</textarea>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                                     <div class="  col-sm-9 text-secondary">
                                         <div class="mb-3">
                                             <img id="showImage" src="{{ asset($book->image)}}"
-                                                alt="Admin" class="rounded-circle p-1 bg-primary" width="80">
+                                                alt="Room" class="rounded-circle p-1 bg-primary" width="80">
                                         </div>
                                     </div>
 

@@ -22,7 +22,9 @@ return new class extends Migration
 
             $table->float('total_day')->default(0);
             $table->float('actual_price')->default(0);
+            $table->float('subtotal')->default(0);
             $table->integer('discount')->default(0);
+            $table->integer('total_price')->default(0);
 
 
             $table->string('payment_method')->nullable();
@@ -31,6 +33,9 @@ return new class extends Migration
            
             $table->string('name')->nullable();
             $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+
+
 
             $table->string('code')->nullable();
             $table->integer('status')->default(1);

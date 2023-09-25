@@ -2,8 +2,8 @@
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
                 <a href="index.html" class="logo">
-                    <img src="{{asset('frontend/assets/img/logos/logo-1.png')}}" class="logo-one" alt="Logo">
-                    <img src="{{asset('frontend/assets/img/logos/footer-logo1.png')}}" class="logo-two" alt="Logo">
+                    <img src="{{asset('/img/logos/logo-1.png')}}" class="logo-one" alt="Logo">
+                    <img src="{{asset('/img/logos/footer-logo1.png')}}" class="logo-two" alt="Logo">
                 </a>
             </div>
 
@@ -51,17 +51,7 @@
                                             </a>
                                         </li>
 
-                                        <li class="nav-item">
-                                            <a href="restaurant.html" class="nav-link">
-                                                Restaurant
-                                            </a>
-                                        </li>
 
-                                        <li class="nav-item">
-                                            <a href="reservation.html" class="nav-link">
-                                                Reservation
-                                            </a>
-                                        </li>
 
                                         <li class="nav-item">
                                             <a href="gallery.html" class="nav-link">
@@ -119,17 +109,17 @@
                                     </ul>
                                 </li>
 
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         Services 
                                         <i class='bx bx-chevron-down'></i>
-                                    </a>
+                                    </a> -->
             @php
             $room=App\Models\Room::latest()->get();
             @endphp                               
 
                                 <li class="nav-item">
-                                    <a href="route('froom.all')" class="nav-link">
+                                    <a href="{{route('froom.all')}}" class="nav-link">
                                          All Rooms
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
@@ -137,7 +127,7 @@
                                         @foreach($room as $item)
                                         
                                         <li class="nav-item">
-                                            <a href="room.html" class="nav-link">
+                                            <a href="{{route('details.all','id')}}" class="nav-link">
                                                 {{$item['type']['name'] }} 
                                             </a>
                                         </li>

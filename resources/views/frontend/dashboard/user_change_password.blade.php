@@ -25,10 +25,10 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="service-side-bar">
-                    @include('frontend.dashboard.user_dashboard')
+                @include('frontend.dashboard.user_menu')
 
 
-                </div>
+</div>
 
 
                 <div class="col-lg-9">

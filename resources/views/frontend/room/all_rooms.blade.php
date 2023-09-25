@@ -11,8 +11,8 @@
                     @foreach($rooms as $item)
                     <div class="col-lg-4 col-md-6">
                         <div class="room-card">
-                            <a href="{{url('room/deltails/'.$item->id)}}">
-                                <img src="asset('upload/rooming/'.$item->image)" alt="Images" style="width:550px; height:300px; ">
+                            <a href="{{url('room/details/'.$item->id)}}">
+                                <img src="asset('frontend/assets/upload/rooming/'.$item->image)" alt="Images" style="width:550px; height:300px; ">
                             </a>
                             <div class="content">
                                 <h5><a href="{{url('room/details/'.$item->id)}}">{{$item['type']['name']}}</a></h5>

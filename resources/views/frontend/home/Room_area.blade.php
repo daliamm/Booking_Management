@@ -1,5 +1,5 @@
 @php
-$room=App\Models\Room::latest()->limit(1)->get();
+$room=App\Models\Room::latest()->limit(4)->get();
 @endphp
 
 
@@ -38,16 +38,17 @@ $room=App\Models\Room::latest()->limit(1)->get();
                                         </div>
                                         <p>{{$item->short_desc}}</p>
                                         <ul>
+                                            <li><i class='bx bx-user'></i> {{$item->total}}</li>
                                             <li><i class='bx bx-user'></i> {{$item->room_capacity}}</li>
-                                            <li><i class='bx bx-expand'></i>{{$item->number_seats}} </li>
+                                           
                                         </ul>
 
                                         <ul>
                                             <li><i class='bx bx-show-alt'></i>{{$item->size}}ft2</li>
-                                            <li><i class='bx bxs-hotel'></i> Kingsize / Twin</li>
+                                           <li><i class='bx bx-expand'></i>{{$item->number_seats}} </li>
                                         </ul>
                                         
-                                        <a href="room-details.html" class="book-more-btn">
+                                        <a href="" class="book-more-btn">
                                             Book Now
                                         </a>
                                     </div>

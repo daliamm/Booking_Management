@@ -5,7 +5,7 @@
  <div class="banner-area" style="height: 480px;">
             <div class="container">
                 <div class="banner-content">
-                    <h1>Discover a Hotel & Resort to Book a Suitable Room</h1>
+                    <h1 >Workspace Booking Made Flexible</h1>
                     
                      
                 </div>
@@ -17,7 +17,7 @@
         <div class="banner-form-area">
             <div class="container">
                 <div class="banner-form">
-                    <form method="get" action="route('booking.search')">
+                    <form method="get" action="{{route('booking.search')}}">
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-3">
                                 <div class="form-group">
@@ -47,11 +47,11 @@
                             <div class="col-lg-2 col-md-2">
                                 <div class="form-group">
                                     <label>GUESTS</label>
-                                    <select class="form-control">
+                                    <select name="persion" class="form-control">
                                         <option>1</option>
-                                        <option>2</option>
-                                        <option>4</option>
-                                        <option>10-20</option>
+                                        <option>1-10</option>
+                                        <option>11-20</option>
+                                        <option>21-50</option>
                                     </select>	
                                 </div>
                             </div>

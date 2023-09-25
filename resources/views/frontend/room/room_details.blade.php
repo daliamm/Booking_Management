@@ -159,6 +159,10 @@
                                                 <a href="#"> <b>Capacity : </b> {{$roomdetails->room_capacity}} Person
                                                     <i class='bx bxs-cloud-download'></i></a>
                                             </li>
+                                            <!-- <li>
+                                                <a href="#"> <b>Capacity : </b> {{$roomdetails->room_capacity}} Person
+                                                    <i class='bx bxs-cloud-download'></i></a>
+                                            </li> -->
                                             <li>
                                                 <a href="#"> <b>Size : </b>{{$roomdetails->size}}ft2 <i
                                                         class='bx bxs-cloud-download'></i></a>
@@ -273,7 +277,7 @@
                                         </div>
                                         <p>{{$item->short_desc}}</p>
                                         <ul>
-                                            <li><i class='bx bx-user'></i> {{$item->room_capacity}}</li>
+                                            <li><i class='bx bx-user'></i> {{$item->room_capacity}}Person</li>
                                             <li><i class='bx bx-expand'></i>{{$item->number_seats}} </li>
                                         </ul>
 

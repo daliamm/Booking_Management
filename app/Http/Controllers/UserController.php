@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     public function Index(){
-        return view('frontend.Index');
+        return view('frontend.index');
     }
-    public function UserController(){
+    public function UserProfile(){
         $id=Auth::user()->id;
         $profileData=User::find($id);
         return view('frontend.dashboard.edit_profile',compact('profileData'));

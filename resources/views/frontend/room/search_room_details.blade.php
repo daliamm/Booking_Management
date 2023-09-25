@@ -29,7 +29,7 @@
                 <div class="room-details-side">
                     <div class="side-bar-form">
                         <h3>Booking Sheet </h3>
-                        <form action="route('user_booking_store',$roomdetalis->id)" method="post" id="bk_form">
+                        <form action="{{route('user_booking_store',$roomdetalis->id)}}" method="post" id="bk_form">
                             @csrf
                             
                             <input type="hidden" name="room_id" value="{{$roomdetalis->id }}">
@@ -64,14 +64,14 @@
                                     <div class="form-group">
                                         <label>Numbers of Persons</label>
                                         <select class="form-control" name="persion" id="nmbr_person">
-                                            @for($i=1 ; $i<$count ; $i++) <option
+                                            @for($i=0 ; $i<= 40 ; $i++) <option
                                                 {{ old('persion') == $i ? 'selected' : ''}} value="0 {{$i}}"> {{$i}}
                                                 </option>
                                                 @endfor
                                         </select>
                                     </div>
                                 </div>
-                                <input type="hidden" id="guests_no" value="{{$roomdetails->guests_no}}">
+                                <input type="hidden" id="total" value="{{$roomdetails->total}}">
                                 <input type="hidden" id="room_price" value="{{$roomdetails->price}}">
                                 <input type="hidden" id="discount_p" value="{{$roomdetails->discount}}">
 
@@ -403,8 +403,8 @@ $("#bk_form").on('submit', function() {
         return false;
     }
     var nmbr_person = $("#nmbr_person").val();
-    var total_adult = $("#total_adult").val();
-    if (parseInt(nmbr_person) > parseInt(total_adult)) {
+    var total = $("#total").val();
+    if (parseInt(nmbr_person) > parseInt(total)) {
         alert('Sorry, you select maximum number of person');
         return false;
     }

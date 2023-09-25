@@ -24,12 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <div class="service-side-bar">
-                    @include('frontend.dashboard.user_dashboard')
-
-
-                </div>
-
+                @include('frontend.dashboard.user_menu')
 
                 <div class="col-lg-9">
                     <div class="service-article">
@@ -37,8 +32,8 @@
 
                         <section class="checkout-area pb-70">
                             <div class="container">
-                            <form action="{{route('profile.store')}}" method="post" enctype="multipart/form-data">
-                                  @csrf
+                                <form action="{{route('profile.store')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12">
                                             <div class="billing-details">
@@ -49,52 +44,54 @@
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="form-group">
                                                             <label> Name <span class="required">*</span></label>
-                                                            <input type="text" name="name" class="form-control"
-                                                                value="{{$profileData->name}}">
+                                                            <input type="text" name="name"
+                                                                value="{{$profileData->name}}" class="form-control">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="form-group">
                                                             <label>Email <span class="required">*</span></label>
-                                                            <input type="email" name="email" class="form-control"
-                                                                value="{{$profileData->email}}">
+                                                            <input type="email" name="email"
+                                                                value="{{$profileData->email}}" class="form-control">
                                                         </div>
                                                     </div>
-
 
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="form-group">
-                                                            <label>Address <span class="required">*</span></label>
-                                                            <input type="text" name="address" class="form-control"
-                                                                value="{{$profileData->address}}">
+                                                            <label>Address</label>
+                                                            <input type="text" name="address"
+                                                                value="{{$profileData->address}}" class="form-control">
                                                         </div>
                                                     </div>
+
+
 
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="form-group">
                                                             <label>Phone <span class="required">*</span></label>
-                                                            <input type="text" name="phone" class="form-control"
-                                                                value="{{$profileData->phone}}">
+                                                            <input type="text" name="phone"
+                                                                value="{{$profileData->phone}}" class="form-control">
                                                         </div>
                                                     </div>
 
-
+                                                
 
                                                     <div class="col-lg-12 col-md-6">
                                                         <div class="form-group">
                                                             <label>User Profile <span class="required">*</span></label>
-                                                            <input type="file" name="photo" id="image"
-                                                                class="form-control">
+                                                            <input type="file" name="photo" class="form-control"
+                                                                id="image">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-12 col-md-6">
                                                         <div class="form-group">
                                                             <label> <span class="required">*</span></label>
-                                                            <img src="{{(!empty($profileData->photo)) ? url('upload/user_images/'.$profileData->photo) : url('upload/user_images/no_image.jpg')}}"
-                                                                alt="Admin" class="rounded-circle p-1 bg-primary"
+                                                            <img src="{{(!empty($profileData->photo)) ? url('upload/user_images/'.$profileData->photo) : url('upload//user_images/no_image.jpg')}}"
+                                                                alt="User" class="rounded-circle p-1 bg-primary"
                                                                 width="110">
+
                                                         </div>
                                                     </div>
 
@@ -116,8 +113,6 @@
         </div>
     </div>
     <!-- Service Details Area End -->
-
-
     <script type="text/javascript">
     $(document).ready(function(e) {
         $('#image').change(function(e) {
@@ -129,8 +124,6 @@
         });
     });
     </script>
-
-
 
 
 

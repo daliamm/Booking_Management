@@ -8,6 +8,7 @@
         <div class="main-body">
             <div class="row">
 
+
                 <div class="card">
                     <div class="card-body">
                         <ul class="nav nav-tabs nav-primary" role="tablist">
@@ -17,7 +18,7 @@
                                     <div class="d-flex align-items-center">
                                         <div class="tab-icon"><i class="bx bx-home font-18 me-1"></i>
                                         </div>
-                                        <div class="tab-title">Manage Room</div>
+                                        <div class="tab-title">Manage Room </div>
                                     </div>
                                 </a>
                             </li>
@@ -31,7 +32,9 @@
                                     </div>
                                 </a>
                             </li>
+
                         </ul>
+
                         <div class="tab-content py-3">
                             <div class="tab-pane fade active show" id="primaryhome" role="tabpanel">
                                 <div class="col-xl-6 mx-auto">
@@ -47,11 +50,15 @@
                                                         id="input1" value="{{$editData['type']['name']}}">
                                                 </div>
                                                 <div class="col-md-4">
+                                                    <label for="input2" class="form-label">Total Number </label>
+                                                    <input type="text" class="form-control" id="input2" name="total"
+                                                        value="{{$editData->total}}">
+                                                </div>
+                                                <div class="col-md-4">
                                                     <label for="input2" class="form-label">Room Capacity</label>
                                                     <input type="text" class="form-control" id="input2"
                                                         name="room_capacity" value="{{$editData->room_capacity}}">
                                                 </div>
-
 
 
                                                 <div class="col-md-4">
@@ -142,52 +149,52 @@
                                                             <select name="facility_name[]" id="facility_name"
                                                                 class="form-control">
                                                                 <option value="">Select Facility</option>
-                                                                <option value="Complimentary Breakfast"
-                                                                    {{$item->facility_name == 'Complimentary Breakfast'?'selected':''}}>
-                                                                    Complimentary Breakfast</option>
+                                                                <option value="Projectors"
+                                                                    {{$item->facility_name == 'Projectors'?'selected':''}}>
+                                                                    Projectors</option>
                                                                 <option value="32/42 inch LED TV"
-                                                                    {{$item->facility_name == 'Complimentary Breakfast'?'selected':''}}>
+                                                                    {{$item->facility_name == '32/42 inch LED TV'?'selected':''}}>
                                                                     32/42 inch LED TV</option>
 
                                                                 <option value="Smoke alarms"
                                                                     {{$item->facility_name == 'Smoke alarms'?'selected':''}}>
                                                                     Smoke alarms</option>
 
-                                                                <option value="Minibar"
-                                                                    {{$item->facility_name == 'Complimentary Breakfast'?'selected':''}}>
-                                                                    Minibar</option>
+                                                                <option value="Security"
+                                                                    {{$item->facility_name == 'Security'?'selected':''}}>
+                                                                    Security</option>
 
-                                                                <option value="Work Desk"
-                                                                    {{$item->facility_name == 'Work Desk'?'selected':''}}>
-                                                                    Work Desk</option>
+                                                                <option value="Desks and Chairs"
+                                                                    {{$item->facility_name == 'Desks and Chairs'?'selected':''}}>
+                                                                    Desks and Chairs</option>
 
-                                                                <option value="Free Wi-Fi"
-                                                                    {{$item->facility_name == 'Free Wi-Fi'?'selected':''}}>
-                                                                    Free Wi-Fi</option>
+                                                                <option value="Wi-Fi"
+                                                                    {{$item->facility_name == 'Wi-Fi'?'selected':''}}>
+                                                                    Wi-Fi</option>
 
-                                                                <option value="Safety box"
-                                                                    {{$item->facility_name == 'Safety box'?'selected':''}}>
-                                                                    Safety box</option>
+                                                                <option value="Conditioning"
+                                                                    {{$item->facility_name == 'Conditioning'?'selected':''}}>
+                                                                    Conditioning</option>
 
-                                                                <option value="Rain Shower"
-                                                                    {{$item->facility_name == 'Rain Shower'?'selected':''}}>
-                                                                    Rain Shower</option>
+                                                                <option value="Audio Equipment"
+                                                                    {{$item->facility_name == 'Audio Equipment'?'selected':''}}>
+                                                                    Audio Equipment</option>
 
-                                                                <option value="Slippers"
-                                                                    {{$item->facility_name == 'Slippers'?'selected':''}}>
-                                                                    Slippers</option>
+                                                                <option value="Phone Lines"
+                                                                    {{$item->facility_name == 'Phone Lines'?'selected':''}}>
+                                                                    Phone Lines</option>
 
-                                                                <option value="Hair dryer"
-                                                                    {{$item->facility_name == 'Hair dryer'?'selected':''}}>
-                                                                    Hair dryer</option>
+                                                                <option value="Lighting"
+                                                                    {{$item->facility_name == 'Lighting'?'selected':''}}>
+                                                                    Lighting</option>
 
-                                                                <option value="Wake-up service"
-                                                                    {{$item->facility_name == 'Wake-up service'?'selected':''}}>
-                                                                    Wake-up service</option>
+                                                                <option value="Collaboration Tools"
+                                                                    {{$item->facility_name == 'Collaboration Tools'?'selected':''}}>
+                                                                    Collaboration Tools</option>
 
-                                                                <option value="Laundry & Dry Cleaning"
-                                                                    {{$item->facility_name == 'Laundry & Dry Cleaning'?'selected':''}}>
-                                                                    Laundry & Dry Cleaning</option>
+                                                                <option value="Computers and Hardware"
+                                                                    {{$item->facility_name == 'Computers and Hardware'?'selected':''}}>
+                                                                    Computers and Hardware</option>
 
                                                                 <option value="Electronic door lock"
                                                                     {{$item->facility_name == 'Electronic door lock'?'selected':''}}>
@@ -220,17 +227,19 @@
                                                                 <option value="32/42 inch LED TV"> 32/42 inch LED TV
                                                                 </option>
                                                                 <option value="Smoke alarms">Smoke alarms</option>
-                                                                <option value="Comfortable Seating"> Comfortable Seating
+                                                                <option value="Security"> Security
                                                                 </option>
-                                                                <option value="Work Desk">Work Desk</option>
+                                                                <option value="Desks and Chairs">Desks and Chairs
+                                                                </option>
                                                                 <option value="Wi-Fi">Wi-Fi</option>
                                                                 <option value="Conditioning">Conditioning</option>
                                                                 <option value="Audio Equipment">Audio Equipment</option>
-                                                                <option value="Catering  ">Catering </option>
-                                                                <option value="Hair dryer">Hair dryer</option>
-                                                                <option value="Wake-up service">Wake-up service</option>
-                                                                <option value="Laundry & Dry Cleaning">Laundry & Dry
-                                                                    Cleaning</option>
+                                                                <option value="Phone Lines">Phone Lines </option>
+                                                                <option value="Lighting">Lighting</option>
+                                                                <option value="Collaboration Tools">Collaboration Tools
+                                                                </option>
+                                                                <option value="Computers and Hardware">Computers and
+                                                                    Hardware</option>
                                                                 <option value="Electronic door lock">Electronic door
                                                                     lock</option>
                                                             </select>
@@ -255,30 +264,6 @@
                                         </div>
                                         <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                         <div class="col-md-12">
                                             <div class="d-md-flex d-grid align-items-center gap-3">
                                                 <button type="submit" class="btn btn-primary px-4">Save Changes</button>
@@ -299,14 +284,16 @@
                                     <div class="card">
 
                                         <div class="card-body">
-                                            <a href="" class="card-title btn btn-primary float-right" onclick="addRoomNo()" id="addRoomNo">
+                                            <a href="" class="card-title btn btn-primary float-right"
+                                                onclick="addRoomNo()" id="addRoomNo">
                                                 <i class="lni lni-plus">Add New</i>
                                             </a>
 
                                             <div class="roomnoHide" id="roomnoHide">
                                                 <form action="{{route('store.room.no',$editData->id)}}" method="post">
-                                                @csrf    
-                                                <input type="hidden" name="room_type_id" value="{{$endData-> roomtype_id}}">
+                                                    @csrf
+                                                    <input type="hidden" name="room_type_id"
+                                                        value="{{$endData-> roomtype_id}}">
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <label for="input2" class="form-label">Room No</label>
@@ -331,12 +318,8 @@
                                                 </form>
                                             </div>
 
-
-
-
-
                                             <div class="card-body">
-                                                <table class="table mb-0 table-striped" id=""roomview>
+                                                <table class="table mb-0 table-striped" id="roomview">
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">Room Number</th>
@@ -353,12 +336,13 @@
                                                             <td>
                                                                 <a href="{{route('edit.roomno',$item->id)}}"
                                                                     class="btn btn-warning px-3 radiue-30">Edit</a>
-                                                                <a href="{{route('delete.roomno',$item->id)}}" class="btn btn-danger px-3 radiue-30"
+                                                                <a href="{{route('delete.roomno',$item->id)}}"
+                                                                    class="btn btn-danger px-3 radiue-30"
                                                                     id="delete">Delete</a>
 
                                                             </td>
                                                         </tr>
-                                                      @endforeach
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -422,7 +406,7 @@
                 var data = $(this)[0].files;
 
                 $.each(data, function(index, file) {
-                    
+
                     if (/(\.|\/)(gif|jpe?g|png)$/i.test(file.type)) {
                         type
                         var fRead = new FileReader();
@@ -438,13 +422,14 @@
                     }
                 });
 
+                MEMO, [25 / 9 / 2023 12: 11 م]
             } else {
                 alert("Your browser doesn't support File API!");
             }
         });
     });
     </script>
-    <div style="visibility: hidden">
+    <!-- <div style="visibility: hidden">
         <div class="whole_extra_item_add" id="whole_extra_item_add">
             <div class="basic_facility_section_remove" id="basic_facility_section_remove">
                 <div class="container mt-2">
@@ -476,7 +461,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script type="text/javascript">
     $(document).ready(function() {
@@ -492,22 +477,19 @@
         });
     });
     </script>
-<!-- start Room Number -->
-<script>
+    <!-- start Room Number -->
+    <script>
     $('#roomnoHide').hide();
     $('#roomview').show();
-  function addRoomNo(){
-    $('#roomnoHide').show();
-    $('#roomview').hide();
-    $('#addRoomNo').hide();
+
+    function addRoomNo() {
+        $('#roomnoHide').show();
+        $('#roomview').hide();
+        $('#addRoomNo').hide();
 
 
-   }
-<script>
-
-
-
-
+    } 
+   <script/>
 
 
 
@@ -526,4 +508,7 @@
 
 
 
-    @endsection
+
+
+
+ @endsection
